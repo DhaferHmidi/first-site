@@ -6,4 +6,12 @@
 }
 #para{
 font-style: italic;
+color: white;
+}
+.favorite{
+   position: absolute;
+        top: 25px;
+        right: 25px;
+        border: 1px solid #000000;
+        z-index: 2;
 }

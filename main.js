@@ -30,9 +30,16 @@ randomIndex = function(array){
 var randomIndex = Math.floor(Math.random()*array.length)
 return array[randomIndex]
 }
-function addImage(){
-	var fixIndex=randomIndex(meal)
+var fixIndex=null
+function addmeal(){
+	 fixIndex=randomIndex(meal)
 $("#pic").attr("src",fixIndex.image)+$("#name").text(fixIndex.mealName)+$( "#para" ).text(fixIndex.ingredients)
 }
-$( "#btn" ).click(addImage);
+var mealHolder=addmeal
+$( "#btn" ).click(addmeal);
+var favorite=[]
+function addfavorite(){
+	return favorite.push(fixIndex)
+}
 
+$("#btn2").click(addfavorite)
