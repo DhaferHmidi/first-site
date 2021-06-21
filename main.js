@@ -24,6 +24,21 @@ ingredients :'2 tablespoons oil1 red bell pepper, sliced 1 yellow bell pepper, s
 image:'./images/teriyaki-salmon-8-768x1152.jpg',
 mealName:'Teriyaki Salmon Recipe - Cooking Classy',
 ingredients:'4 (6 oz) skinless salmon fillets,1 green onion, chopped (optional),1/2 tsp sesame seeds, for serving (optional),6 - 8 Tbsp low-sodium soy sauce, depending on how salty you like it,8 Tbsp water divided,3 Tbsp honey,2 Tbsp packed light brown sugar,1 Tbsp minced garlic (3 cloves),1 Tbsp minced peeled fresh ginger,1 or 1/2 Tbsp fresh lemon juice,1 Tbsp cornstarch'
+},
+{
+ image: './images/Garlic-Butter-flank-Steak.jpg',
+ mealName:'Garlic Butter Steak and Potatoes Skillet',
+ ingredients:'1 1/2 lb (650g) flank steak, sliced against the grain (or ribeye steak, tenderloin, strip loin, strip steak…),1 or 1/2 lb (650g) baby yellow potatoes, quartered,1 tablespoon olive oil,3 tablespoons butter, divided,5 garlic cloves, minced,1 teaspoon fresh thyme, chopped,1 teaspoon fresh rosemary, chopped,1 teaspoon fresh oregano, chopped,Salt and fresh cracked pepper,Crushed red chili pepper flakes, optional'
+},
+{
+	image:'./images/unnamed.jpg',
+	mealName:'Garlic Herb Roasted Potatoes Carrots and Green Beans',
+	ingredients:'1 1/4 pounds baby red potatoes (halved and larger ones quartered),1 pound medium carrots (scrubbed clean, cut into 2-inch pieces and thicker portions halved),3 tablespoons olive oil (divided),1 tablespoon fresh thyme (minced),1 tablespoon fresh rosemary (minced)saltfreshly ground black pepper,12 ounces green beans (ends trimmed, halved),1 or 1/2 tablespoons minced garlic (4 cloves'
+},
+{
+	image:'/images/Keto-Vegetarian-Breakfast-719x1024.jpg',
+	mealName:'Keto Vegetarian',
+	ingredients:'2 eggs,2 cups spinach,½ avocado,½ cup sliced mushrooms,1½ tbsp. olive oil,1 tsp. salt,1 tsp. black pepper'
 }
 ]
 randomIndex = function(array){
@@ -41,5 +56,8 @@ var favorite=[]
 function addfavorite(){
 	return favorite.push(fixIndex)
 }
+ function displayFavorite(){
+           return addfavorite()
+      }
 
 $("#btn2").click(addfavorite)
