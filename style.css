@@ -6,7 +6,10 @@
 }
 #para{
 font-style: italic;
-color: white;
+color: brown;
+font-size: 25px;
+font-size: large;
+  font-size: 150%;
 }
 .favorite{
    position: absolute;

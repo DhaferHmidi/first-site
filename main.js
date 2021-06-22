@@ -36,9 +36,24 @@ ingredients:'4 (6 oz) skinless salmon fillets,1 green onion, chopped (optional),
 	ingredients:'1 1/4 pounds baby red potatoes (halved and larger ones quartered),1 pound medium carrots (scrubbed clean, cut into 2-inch pieces and thicker portions halved),3 tablespoons olive oil (divided),1 tablespoon fresh thyme (minced),1 tablespoon fresh rosemary (minced)saltfreshly ground black pepper,12 ounces green beans (ends trimmed, halved),1 or 1/2 tablespoons minced garlic (4 cloves'
 },
 {
-	image:'/images/Keto-Vegetarian-Breakfast-719x1024.jpg',
+	image:'./images/Keto-Vegetarian-Breakfast-719x1024.jpg',
 	mealName:'Keto Vegetarian',
 	ingredients:'2 eggs,2 cups spinach,½ avocado,½ cup sliced mushrooms,1½ tbsp. olive oil,1 tsp. salt,1 tsp. black pepper'
+},
+{
+	image:'./images/Scrambled eggs with veggies & feta cheese and roasted mini potatoes seasoned in olive oil.jpg',
+	mealName:'Extreme Veggie Scrambled Eggs',
+	ingredients:'¼ cup sliced fresh mushrooms,¼ cup chopped onions,¼ cup chopped green bell peppers,6 eggs,¼ cup milk,¼ cup chopped fresh tomato,¼ cup shredded Cheddar cheese'
+},
+{
+ image:'./images/Cumin Quinoa.jpg',
+ mealName:'Cumin Quinoa',
+ ingredients:'1 Cup Quinoa,2 Cups Filtered Water,2 Cloves Minced Garlic ,1 Tablespoon Cumin,1/4 Teaspoon Dried Thyme,1/2 Teaspoon Maldon Sea Salt,1/4 Teaspoon Black Pepper,1/4 Teaspoon Cayenne Pepper,1/2 Fresh Squeezed Lemon,1 Tablespoon Avocado Oil or Olive Oil'
+},
+{
+	image:'./images/Avocado-Strawberry-Spinach-Salad-1.jpg',
+	mealName:'Avocado Strawberry Spinach Salad',
+	ingredients:'1 bag of fresh, organic spinach,1 carton of organic strawberries,2 large Hass avocados, sliced into cubes,1/3 cup of raw walnuts or slivered almonds,1/3 cup of crumbled goat feta or goat cheese,1 tsp of sumac to season'
 }
 ]
 randomIndex = function(array){
@@ -57,7 +72,11 @@ function addfavorite(){
 	return favorite.push(fixIndex)
 }
  function displayFavorite(){
-           return addfavorite()
+ 	var str =''
+           for (var i=0;i<favorite.length;i++){
+           	str=str+favorite[i].mealName + favorite[i].ingredients + '\n'
+           }
+           return str
       }
-
 $("#btn2").click(addfavorite)
+$("btn3").click(displayFavorite)
