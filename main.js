@@ -1,3 +1,5 @@
+
+var holder ="";
 var meal =[
 {
  image :"./images/chicken-and-asparagus-skillet-recipe-2.jpg",
@@ -89,7 +91,7 @@ ingredients:'4 (6 oz) skinless salmon fillets,1 green onion, chopped (optional),
 	mealName:'Chile-Lime Tilapia with Corn Sauté',
 	ingredients:'4 4-5 ounces fresh or frozen skinless white firm-fleshed fish fillets, such as tilapia, catfish, sole, flounder, or cod,1 tablespoon lime juice,1½ teaspoons ground ancho chile pepper or chili powder,¼ teaspoon salt,1 tablespoon canola oil,2 0.667 cups frozen whole kernel roasted or regular corn, thawed,¼ cup finely chopped red onion,2 teaspoons finely chopped seeded fresh jalapeño chile pepper,2 cloves garlic, minced,1 tablespoon snipped fresh cilantro Lime wedges and/or additional jalapeño slices (optional)'
 },{
-image:'./images/Baked Pineapple Salmon.jpg',
+image:'./images/BakedPineappleSalmon.jpg',
 mealName:'Baked Pineapple Salmon',
 ingredients:'17 pineapple rings, fresh or canned, 1 large salmon fillet (about 3 lbs.),Kosher salt, Freshly ground black pepper,3 tbsp. melted butter,3 tbsp. sweet chili sauce,2 tbsp. freshly chopped cilantro,3 cloves garlic, minced,2 tsp. freshly grated ginger,2 tsp. toasted sesame oil,1/2 tsp. crushed red pepper flakes, Toasted sesame seeds, for garnish,Thinly sliced green onions, for garnish ,Lime wedges, for serving'
 }
@@ -103,26 +105,27 @@ var fixIndex=null
 function addmeal(){
 	 fixIndex=randomIndex(meal)
 $("#pic").attr("src",fixIndex.image)+$("#name").text(fixIndex.mealName)+$( "#para" ).text(fixIndex.ingredients)
+holder = fixIndex;
+
 }
 var mealHolder=addmeal
 $( "#btn" ).click(addmeal);
 var favorite=[]
-function addfavorite(){
-	console.log('hello')
-	return favorite.push(fixIndex)
+ function addfavorite(){
+ 		console.log("img",holder)
+	return favorite.push(holder)
+
 }
 $("#btn2").click(addfavorite)
 
  function displayFavorite(){
- 	console.log("hey")
- 	// var str =""
-for(var i = 0 ; i<favorite.length;i++){
-	// str += favorite[i].mealName + favorite[i].ingredients
-	$("#pic1").attr("src",favorite[i].image)+$("#name1").text(favorite[i].mealName)+$( "#para1" ).text(favorite[i].ingredients)
-
+  for (var i=0;i<favorite.length;i++){
+  	var timplate=`<div>
+  	<img src= ${favorite[i].image}/>
+  	<p>${favorite[i].mealName}</p>
+    <p>${favorite[i].ingredients}</p>
+  	</div>`
+  	$('body').append(timplate)
+  }
 }
-// return str
-      }
-
-
 $("#btn3").click(displayFavorite)
