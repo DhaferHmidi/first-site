@@ -54,8 +54,23 @@ ingredients:'4 (6 oz) skinless salmon fillets,1 green onion, chopped (optional),
 	image:'./images/Avocado-Strawberry-Spinach-Salad-1.jpg',
 	mealName:'Avocado Strawberry Spinach Salad',
 	ingredients:'1 bag of fresh, organic spinach,1 carton of organic strawberries,2 large Hass avocados, sliced into cubes,1/3 cup of raw walnuts or slivered almonds,1/3 cup of crumbled goat feta or goat cheese,1 tsp of sumac to season'
+},
+{
+	image:'./images/gallery-1510947859-radicchio-salad-roasted-fennel-shrimp-ghk-1217.jpg',
+	mealName:'Radicchio Salad with Roasted Fennel and Shrim',
+	ingredients : '2 lemons, 1 medium head radicchio, about 8 ounces,1 bulb fennel,1 red onion,6 slices bacon,3/4 lb. medium peeled and deveined shrimp,2 tbsp. balsamic vinegar,1 tsp. sugar,1 c. fresh flat-leaf parsley leaves,4 thick slices sourdough or country bread,Manchego cheese'
+},
+{
+	image:'./images/vegetable-ramen-mushrooms-and-bok-choy-ghk-1534278449.jpg',
+	mealName:'Vegetable Ramen With Mushrooms and Bok Choy',
+	ingredients:'3 scallions,1 or 3-oz piece ginger, peeled and very thinly sliced,5 tbsp. low-sodium tamari or soy sauce,6 oz. ramen noodles,6 oz. shiitake mushroom caps, thinly sliced,2 heads baby bok choy, stems thinly sliced and leaves halved lengthwise,4 oz.  snow peas, thinly sliced lengthwise snow peas, thinly sliced lengthwise,1 tbsp. rice vinegar,2 soft-medium boiled eggs, peeled and halved,1/2 c. cilantro sprigs Thinly sliced red chile, to taste'	
 }
 ]
+function toUppercase(meal){
+	for(var i =0;i<meal.length;i++){
+		meal.mealName(toUpperCase())
+	}
+}
 randomIndex = function(array){
 var randomIndex = Math.floor(Math.random()*array.length)
 return array[randomIndex]
