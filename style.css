@@ -22,3 +22,10 @@ font-size: large;
 .somthing{
   color: white;
 }
+
+
+
+body {
+ background-image: url("./images/bgr.jpg");
+ background-repeat: no-repeat;
+}
