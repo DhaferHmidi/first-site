@@ -114,15 +114,12 @@ var favorite=[]
  function addfavorite(){
  		console.log("img",holder)
 	return favorite.push(holder)
-
 }
 $("#btn2").click(addfavorite)
 
  function displayFavorite(){
  	var arr = Object.values(favorite.reduce((acc,cur)=>Object.assign(acc,{[cur.id]:cur}),{}));
-
   for (var i=0;i<arr.length;i++){
-
   	console.log(`${arr[i].image}`)
   	var timplate=`<div >
   	<img src = "${arr[i].image}" style="height:200px;width:250px;"/>
