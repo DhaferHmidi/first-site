@@ -1,5 +1,4 @@
-var meal =
-[
+var meal =[
 {
  image :"./images/chicken-and-asparagus-skillet-recipe-2.jpg",
  mealName:'chicken-and-asparagus',
@@ -64,13 +63,38 @@ ingredients:'4 (6 oz) skinless salmon fillets,1 green onion, chopped (optional),
 	image:'./images/vegetable-ramen-mushrooms-and-bok-choy-ghk-1534278449.jpg',
 	mealName:'Vegetable Ramen With Mushrooms and Bok Choy',
 	ingredients:'3 scallions,1 or 3-oz piece ginger, peeled and very thinly sliced,5 tbsp. low-sodium tamari or soy sauce,6 oz. ramen noodles,6 oz. shiitake mushroom caps, thinly sliced,2 heads baby bok choy, stems thinly sliced and leaves halved lengthwise,4 oz.  snow peas, thinly sliced lengthwise snow peas, thinly sliced lengthwise,1 tbsp. rice vinegar,2 soft-medium boiled eggs, peeled and halved,1/2 c. cilantro sprigs Thinly sliced red chile, to taste'	
+},
+{
+	image:'./images/pastrami-hash.jpg',
+	mealName:'Pastrami hash',
+	ingredients:'2 tbsp vegetable oil,430g Maris Piper potatoes, cut into 2cm cubes,40g pastrami, torn,30g emmental, grated,2 medium eggs,sliced gherkins, to serve,American mustard, to serve (optional)'
+},
+{
+	image:'./images/coriander-salmon-with-curried-quinoa-pomegranate-1.jpg',
+	mealName:'Coriander salmon with curried quinoa & pomegranate',
+	ingredients:'120g quinoa, rinsed,320g fine green beans, trimmed and cut into thirds,15g pack coriander,15g fresh ginger, peeled and chopped,1 lemon, juiced,½ tsp ground cumin,1 green or red chilli, seeds removed and chopped,1 tsp ground coriander,4 wild skinless salmon steaks (460g),1 tbsp extra virgin olive oil,2-3 courgettes (320g), halved and sliced,2 red onions, finely chopped,2 tsp garam masala,2 tsp vegetable bouillon powder,400g can chickpeas, drained,150g pomegranate seeds'
+},
+{
+	image:'./images/Garlic-Butter-Meatballs-recipe-02.jpg',
+	mealName:'Garlic Butter Turkey Meatballs with Lemon Zucchini Noodles',
+	ingredients:'1/2 lb (220g) ground turkey meat,1/2 lb (220g) ground pork meat (optional, see recipe notes),1/2 cup shredded mozzarella (or cheddar, provolone…),4 cloves garlic, grated + 2 cloves garlic, minced,1 teaspoon Italian seasoning,1/2 teaspoon red crushed chili pepper flakes, optional,1 crumbled bouillon cube, optional Salt and fresh cracked black pepper, to taste,1 cup fresh chopped cilantro (or parsley), divided,3 tablespoons butter,4 medium zucchini, spiralized Juice of 1/2 lemon,1 tablespoon hot sauce of your choice (we used Sriracha)'
+},
+{
+	image:'./images/cream-cheese-dessert-1.jpg',
+	mealName:'Blueberry & Strawberry Creamy Mousse',
+	ingredients:'8 ounces (225g) cream cheese or mascarpone,1 cup whipping cream,1/4 cup low carb sweetener (or honey for non-keto),3/4 teaspoon vanilla extract,2 cups berries (we used blueberries and strawberries)'
+},
+{
+	image:'./images/chile lime tilapia.jpg',
+	mealName:'Chile-Lime Tilapia with Corn Sauté',
+	ingredients:'4 4-5 ounces fresh or frozen skinless white firm-fleshed fish fillets, such as tilapia, catfish, sole, flounder, or cod,1 tablespoon lime juice,1½ teaspoons ground ancho chile pepper or chili powder,¼ teaspoon salt,1 tablespoon canola oil,2 0.667 cups frozen whole kernel roasted or regular corn, thawed,¼ cup finely chopped red onion,2 teaspoons finely chopped seeded fresh jalapeño chile pepper,2 cloves garlic, minced,1 tablespoon snipped fresh cilantro Lime wedges and/or additional jalapeño slices (optional)'
+},{
+image:'./images/Baked Pineapple Salmon.jpg',
+mealName:'Baked Pineapple Salmon',
+ingredients:'17 pineapple rings, fresh or canned, 1 large salmon fillet (about 3 lbs.),Kosher salt, Freshly ground black pepper,3 tbsp. melted butter,3 tbsp. sweet chili sauce,2 tbsp. freshly chopped cilantro,3 cloves garlic, minced,2 tsp. freshly grated ginger,2 tsp. toasted sesame oil,1/2 tsp. crushed red pepper flakes, Toasted sesame seeds, for garnish,Thinly sliced green onions, for garnish ,Lime wedges, for serving'
 }
 ]
-function toUppercase(meal){
-	for(var i =0;i<meal.length;i++){
-		meal.mealName(toUpperCase())
-	}
-}
+
 randomIndex = function(array){
 var randomIndex = Math.floor(Math.random()*array.length)
 return array[randomIndex]
@@ -84,14 +108,21 @@ var mealHolder=addmeal
 $( "#btn" ).click(addmeal);
 var favorite=[]
 function addfavorite(){
+	console.log('hello')
 	return favorite.push(fixIndex)
 }
- function displayFavorite(){
- 	var str =''
-           for (var i=0;i<favorite.length;i++){
-           	str=str+favorite[i].mealName + favorite[i].ingredients + '\n'
-           }
-           return str
-      }
 $("#btn2").click(addfavorite)
-$("btn3").click(displayFavorite)
+
+ function displayFavorite(){
+ 	console.log("hey")
+ 	// var str =""
+for(var i = 0 ; i<favorite.length;i++){
+	// str += favorite[i].mealName + favorite[i].ingredients
+	$("#pic1").attr("src",favorite[i].image)+$("#name1").text(favorite[i].mealName)+$( "#para1" ).text(favorite[i].ingredients)
+
+}
+// return str
+      }
+
+
+$("#btn3").click(displayFavorite)
